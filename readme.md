@@ -1,6 +1,6 @@
 # Lou's Dev Environment:
 
-A development in Azure. Written in Terraform
+A development environment in Azure. Written in Terraform
 
 ## Changelog:
 
