@@ -6,7 +6,8 @@ resource "azurerm_network_interface" "dev-vm1-nic" {
   ip_configuration {
     name                          = "dev-vm-1-private-ip"
     subnet_id                     = azurerm_subnet.dev-subnet-1.id
-    private_ip_address_allocation = "Dynamic"
+    private_ip_address_allocation = "Static"
+    private_ip_address            = var.vmdev1-ip
     public_ip_address_id          = azurerm_public_ip.vmdev1-pip.id
   }
 }
@@ -19,8 +20,8 @@ resource "azurerm_network_interface" "dev-vm2-nic" {
   ip_configuration {
     name                          = "dev-vm-2-private-ip"
     subnet_id                     = azurerm_subnet.dev-subnet-1.id
-    private_ip_address_allocation = "Dynamic"
-    public_ip_address_id          = azurerm_public_ip.vmdev2-pip.id
+    private_ip_address_allocation = "Static"
+    private_ip_address            = var.vmdev2-ip
   }
 }
 

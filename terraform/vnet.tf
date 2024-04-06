@@ -19,29 +19,36 @@ resource "azurerm_public_ip" "vmdev1-pip" {
   allocation_method   = "Static"
 }
 
-resource "azurerm_public_ip" "vmdev2-pip" {
-  name                = "pip-vmdev2"
-  location            = azurerm_resource_group.dev-rg.location
-  resource_group_name = azurerm_resource_group.dev-rg.name
-  allocation_method   = "Static"
-}
-
 resource "azurerm_network_security_group" "dev-subnet-1-nsg" {
   name                = "nsg-dev-subnet-1"
   location            = "UK South"
   resource_group_name = azurerm_resource_group.dev-rg.name
 }
 
-resource "azurerm_network_security_rule" "example" {
-  name                        = "AllowRDPBetweenVM1andVM2"
+resource "azurerm_network_security_rule" "AllowRDP" {
+  name                        = "AllowRDP"
   priority                    = 100
-  direction                   = "Outbound"
+  direction                   = "Inbound"
   access                      = "Allow"
   protocol                    = "Tcp"
   source_port_range           = "*"
+  destination_port_range      = "3389"
+  source_address_prefix       = var.vmdev1-ip
+  destination_address_prefix  = var.vmdev2-ip
+  resource_group_name         = azurerm_resource_group.dev-rg.name
+  network_security_group_name = azurerm_network_security_group.dev-subnet-1-nsg.name
+}
+
+resource "azurerm_network_security_rule" "AllowPing" {
+  name                        = "AllowPingFromvmdev1"
+  priority                    = 110
+  direction                   = "Inbound"
+  access                      = "Allow"
+  protocol                    = "Icmp"
+  source_port_range           = "*"
   destination_port_range      = "*"
-  source_address_prefix       = "*"
-  destination_address_prefix  = "3389"
+  source_address_prefix       = var.vmdev1-ip
+  destination_address_prefix  = var.vmdev2-ip
   resource_group_name         = azurerm_resource_group.dev-rg.name
   network_security_group_name = azurerm_network_security_group.dev-subnet-1-nsg.name
 }
