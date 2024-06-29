@@ -33,8 +33,8 @@ resource "azurerm_network_security_rule" "AllowRDP" {
   protocol                    = "Tcp"
   source_port_range           = "*"
   destination_port_range      = "3389"
-  source_address_prefix       = var.vmdev1-ip
-  destination_address_prefix  = var.vmdev2-ip
+  source_address_prefix       = "*"
+  destination_address_prefix  = "*"
   resource_group_name         = azurerm_resource_group.dev-rg.name
   network_security_group_name = azurerm_network_security_group.dev-subnet-1-nsg.name
 }
