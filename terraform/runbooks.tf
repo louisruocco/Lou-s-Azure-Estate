@@ -34,7 +34,7 @@ resource "azurerm_automation_runbook" "rb-fitness" {
   automation_account_name = azurerm_automation_account.nonna-autoacc.name
   log_verbose             = "true"
   log_progress            = "true"
-  description             = "Nonna main script"
+  description             = "Fitness Runbook main script"
   runbook_type            = "PowerShellWorkflow"
 
   content = data.local_file.nonna-script.content
@@ -48,6 +48,6 @@ resource "azurerm_automation_schedule" "nonna-schedule" {
   interval                = 1
   timezone                = "Europe/London"
   start_time              = "2024-05-20T18:08:00+00:00"
-  description             = "Nonna's schedule for the week"
-  week_days               = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+  description             = "Weekly schedule for the Fitness runbook"
+  week_days               = ["Tuesday", "Thursday", ]
 }
