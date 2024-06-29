@@ -3,11 +3,19 @@
 A development environment in Azure. Written in Terraform
 
 ## Changelog:
-### v1.1
+### v2.1
+- **Fitness Runbook added** | In Progress
+    - Created a Fitness Runbook which will create workout plans based on set criteria and send them on an email to me every Tuesday and Thursday
+
+### v2.0:
+- **Nonna Runbook added**
+    - Migrated Nonna fully into an Azure Runbook from the viper VM
+    - Viper VM now decommissioned
+    - More details of this change on the repo itself | https://github.com/louisruocco/Nonna
+
+### v1.1:
 - **Organised Azure estate to all come out of one repository**
     - All future infrastructure changes will be built here and stay in this repository
-    - Created runbook environment to replace viper vm for cost savings
-        - More details of this change on the repo itself | https://github.com/louisruocco/Nonna
 
 ### v1.0:
 - **Initial Commit**
