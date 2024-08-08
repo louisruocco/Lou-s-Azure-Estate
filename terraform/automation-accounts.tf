@@ -6,10 +6,10 @@ resource "azurerm_automation_account" "nonna-autoacc" {
   sku_name = "Basic"
 }
 
-resource "azurerm_automation_account" "fitness-autoacc" {
-  name                = "autoacc-fitness"
-  location            = azurerm_resource_group.fitness-rg.location
-  resource_group_name = azurerm_resource_group.fitness-rg.name
+# resource "azurerm_automation_account" "fitness-autoacc" {
+#   name                = "autoacc-fitness"
+#   location            = azurerm_resource_group.fitness-rg.location
+#   resource_group_name = azurerm_resource_group.fitness-rg.name
 
-  sku_name = "Basic"
-}
+#   sku_name = "Basic"
+# }

@@ -27,27 +27,22 @@ resource "azurerm_automation_schedule" "nonna-schedule" {
   week_days               = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 }
 
-resource "azurerm_automation_runbook" "rb-fitness" {
-  name                    = "nonnascript"
-  location                = azurerm_resource_group.nonna-rg.location
+resource "azurerm_automation_job_schedule" "example" {
   resource_group_name     = azurerm_resource_group.nonna-rg.name
   automation_account_name = azurerm_automation_account.nonna-autoacc.name
-  log_verbose             = "true"
-  log_progress            = "true"
-  description             = "Fitness Runbook main script"
-  runbook_type            = "PowerShellWorkflow"
-
-  content = data.local_file.nonna-script.content
+  schedule_name           = "nonnaschedule"
+  runbook_name            = "nonnascript"
 }
 
-resource "azurerm_automation_schedule" "nonna-schedule" {
-  name                    = "nonnaschedule"
-  resource_group_name     = azurerm_resource_group.nonna-rg.name
-  automation_account_name = azurerm_automation_account.nonna-autoacc.name
-  frequency               = "Week"
-  interval                = 1
-  timezone                = "Europe/London"
-  start_time              = "2024-05-20T18:08:00+00:00"
-  description             = "Weekly schedule for the Fitness runbook"
-  week_days               = ["Tuesday", "Thursday", ]
-}
+# resource "azurerm_automation_runbook" "rb-fitness" {
+#   name                    = "nonnascript"
+#   location                = azurerm_resource_group.fitness-rg.location
+#   resource_group_name     = azurerm_resource_group.fitness-rg.name
+#   automation_account_name = azurerm_automation_account.nonna-autoacc.name
+#   log_verbose             = "true"
+#   log_progress            = "true"
+#   description             = "Fitness Runbook main script"
+#   runbook_type            = "PowerShellWorkflow"
+
+#   content = data.local_file.nonna-script.content
+# }

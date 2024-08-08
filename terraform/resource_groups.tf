@@ -12,3 +12,8 @@ resource "azurerm_resource_group" "fitness-rg" {
   name     = "rg-lou-fitness"
   location = "UK South"
 }
+
+resource "azurerm_resource_group" "sql-ag-rg" {
+  name     = "rg-lou-sql"
+  location = "UK South"
+}

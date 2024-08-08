@@ -68,3 +68,68 @@ resource "azurerm_windows_virtual_machine" "dev-vm-2" {
     version   = "latest"
   }
 }
+resource "azurerm_windows_virtual_machine" "sql-vm-ag-1" {
+  name                  = "vmdevag1"
+  resource_group_name   = azurerm_resource_group.sql-ag-rg.name
+  location              = "UK South"
+  size                  = "Standard_B2ms"
+  admin_username        = "Louis"
+  admin_password        = var.dev_vm_2_admin_password
+  network_interface_ids = [azurerm_network_interface.dev-vm2-nic.id]
+
+  os_disk {
+    caching              = "ReadWrite"
+    storage_account_type = "Standard_LRS"
+  }
+
+  source_image_reference {
+    publisher = "MicrosoftWindowsServer"
+    offer     = "WindowsServer"
+    sku       = "2019-Datacenter"
+    version   = "latest"
+  }
+}
+
+resource "azurerm_windows_virtual_machine" "sql-vm-ag-2" {
+  name                  = "vmdevag2"
+  resource_group_name   = azurerm_resource_group.sql-ag-rg.name
+  location              = "UK South"
+  size                  = "Standard_B2ms"
+  admin_username        = "Louis"
+  admin_password        = var.dev_vm_2_admin_password
+  network_interface_ids = [azurerm_network_interface.dev-vm2-nic.id]
+
+  os_disk {
+    caching              = "ReadWrite"
+    storage_account_type = "Standard_LRS"
+  }
+
+  source_image_reference {
+    publisher = "MicrosoftWindowsServer"
+    offer     = "WindowsServer"
+    sku       = "2019-Datacenter"
+    version   = "latest"
+  }
+}
+
+resource "azurerm_windows_virtual_machine" "sql-vm-ag-3" {
+  name                  = "vmdevag3"
+  resource_group_name   = azurerm_resource_group.sql-ag-rg.name
+  location              = "UK South"
+  size                  = "Standard_B2ms"
+  admin_username        = "Louis"
+  admin_password        = var.dev_vm_2_admin_password
+  network_interface_ids = [azurerm_network_interface.dev-vm2-nic.id]
+
+  os_disk {
+    caching              = "ReadWrite"
+    storage_account_type = "Standard_LRS"
+  }
+
+  source_image_reference {
+    publisher = "MicrosoftWindowsServer"
+    offer     = "WindowsServer"
+    sku       = "2019-Datacenter"
+    version   = "latest"
+  }
+}
