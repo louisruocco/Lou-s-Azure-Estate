@@ -4,6 +4,9 @@ A development environment in Azure. Written in Terraform
 
 ## Changelog:
 ### v2.1
+- **New VMs Added** 
+    - Created 3 new VMs, among the other relevant resources needed to access them to create a 3 Node SQL AG test environment
+
 - **Fitness Runbook added** | In Progress
     - Created a Fitness Runbook which will create workout plans based on set criteria and send them on an email to me every Tuesday and Thursday
 
