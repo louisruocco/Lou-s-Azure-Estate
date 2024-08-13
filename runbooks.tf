@@ -22,7 +22,7 @@ resource "azurerm_automation_schedule" "nonna-schedule" {
   frequency               = "Week"
   interval                = 1
   timezone                = "Europe/London"
-  start_time              = "2024-05-20T18:08:00+00:00"
+  start_time              = "2024-08-14T18:08:00+00:00"
   description             = "Nonna's schedule for the week"
   week_days               = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 }
