@@ -3,6 +3,10 @@
 A development environment in Azure. Written in Terraform
 
 ## Changelog:
+### v3.2:
+- **New Key Vault and Runbook added for Dictionary project**
+    - New infrastructure to accomodate the Dictionary project
+
 ### v3.1: 
 - **Updated Schedule of Nonna Runbook**
     - Updated the schedule of the Nonna runbook to run at 8am from 7pm
