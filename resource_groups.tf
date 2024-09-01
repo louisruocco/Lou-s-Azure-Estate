@@ -8,11 +8,6 @@ resource "azurerm_resource_group" "nonna-rg" {
   location = "UK South"
 }
 
-resource "azurerm_resource_group" "sql-ag-rg" {
-  name     = "rg-lou-sql"
-  location = "UK South"
-}
-
 resource "azurerm_resource_group" "dict-rg" {
   name     = "rg-lou-dict"
   location = "UK South"
