@@ -12,3 +12,8 @@ resource "azurerm_resource_group" "dict-rg" {
   name     = "rg-lou-dict"
   location = "UK South"
 }
+
+resource "azurerm_resource_group" "sql-rg" {
+  name     = "rg-lou-sql"
+  location = "UK South"
+}

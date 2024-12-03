@@ -3,6 +3,10 @@
 A development environment in Azure. Written in Terraform
 
 ## Changelog:
+### 4.0
+- **New SQL VMs for testing**
+    - New VMs for SQL testing. Also added all current resources to state
+
 ### v3.2:
 - **New Key Vault and Runbook added for Dictionary project**
     - New infrastructure to accomodate the Dictionary project
