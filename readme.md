@@ -3,7 +3,7 @@
 A development environment in Azure. Written in Terraform
 
 ## Changelog:
-### 4.0
+### v4.0
 - **New SQL VMs for testing**
     - New VMs for SQL testing. Also added all current resources to state
 
