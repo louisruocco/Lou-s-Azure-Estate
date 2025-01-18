@@ -13,4 +13,3 @@ resource "azurerm_automation_account" "dict-autoacc" {
 
   sku_name = "Basic"
 }
-

@@ -69,7 +69,7 @@ resource "azurerm_windows_virtual_machine" "dev-vm-1" {
   source_image_reference {
     publisher = "MicrosoftWindowsServer"
     offer     = "WindowsServer"
-    sku       = "2016-Datacenter"
+    sku       = "2022-Datacenter"
     version   = "latest"
   }
 }
@@ -91,7 +91,7 @@ resource "azurerm_windows_virtual_machine" "dev-vm-2" {
   source_image_reference {
     publisher = "MicrosoftWindowsServer"
     offer     = "WindowsServer"
-    sku       = "2016-Datacenter"
+    sku       = "2022-Datacenter"
     version   = "latest"
   }
 }
@@ -113,7 +113,7 @@ resource "azurerm_windows_virtual_machine" "sql-vm-1" {
   source_image_reference {
     publisher = "MicrosoftWindowsServer"
     offer     = "WindowsServer"
-    sku       = "2016-Datacenter"
+    sku       = "2022-Datacenter"
     version   = "latest"
   }
 }
@@ -152,7 +152,7 @@ resource "azurerm_windows_virtual_machine" "sql-vm-2" {
   source_image_reference {
     publisher = "MicrosoftWindowsServer"
     offer     = "WindowsServer"
-    sku       = "2016-Datacenter"
+    sku       = "2022-Datacenter"
     version   = "latest"
   }
 }

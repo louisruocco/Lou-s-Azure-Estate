@@ -7,7 +7,7 @@ resource "azurerm_virtual_network" "dev-vnet" {
 }
 
 resource "azurerm_virtual_network" "sql-vnet" {
-  name                = "vnet-dev-env"
+  name                = "vnet-sql"
   resource_group_name = azurerm_resource_group.sql-rg.name
   location            = "UK South"
   address_space       = ["10.1.0.0/16"]
@@ -37,7 +37,7 @@ resource "azurerm_public_ip" "vmdev1-pip" {
 }
 
 resource "azurerm_public_ip" "vmsql1-pip" {
-  name                = "pip-vmdev1"
+  name                = "pip-vmsql1"
   location            = azurerm_resource_group.sql-rg.location
   resource_group_name = azurerm_resource_group.sql-rg.name
   allocation_method   = "Static"
