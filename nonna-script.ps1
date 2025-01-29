@@ -1,4 +1,4 @@
-Connect-AzAccount -Identity
+Connect-AzAccount -Identity '678655f6-eef2-430b-817f-0285fb5dc702'
 function Get-BlobContents {
     param (
         [Parameter(Mandatory)]
