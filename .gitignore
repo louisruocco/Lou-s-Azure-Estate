@@ -1,6 +1,0 @@
-*.tfstate
-*.tfstate.backup
-*.tfstate.*
-variables.tf
-*.hcl
-.terraform
