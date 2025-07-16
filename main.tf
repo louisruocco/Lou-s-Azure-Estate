@@ -51,6 +51,6 @@ module "vm-lou" {
   admin_password       = "Hashirama@985"
   nic_name             = module.nic-vm-lou.network_interface_name
   network_interface_id = module.nic-vm-lou.network_interface_id
-  sku_size             = "Standard B1"
+  sku_size             = "Standard B1ms"
   location             = "UK South"
 }
