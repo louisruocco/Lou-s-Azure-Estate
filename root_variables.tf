@@ -7,7 +7,7 @@ variable "azure_tags" {
   type = map(string)
   default = {
     Created_with = "Terraform"
-    Location     = var.location
+    Location     = "UK South"
     Created_By   = "Louis Ruocco"
   }
 }
