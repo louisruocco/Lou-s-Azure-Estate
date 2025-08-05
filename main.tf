@@ -5,6 +5,12 @@ terraform {
       version = "~>4.0"
     }
   }
+  backend "azurerm" {
+    resource_group_name  = "rg-lou"
+    storage_account_name = "salou"
+    container_name       = "tfstate"
+    key                  = "terraform.tfstate"
+  }
 }
 
 provider "azurerm" {
